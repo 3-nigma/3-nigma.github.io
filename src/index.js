@@ -8,7 +8,8 @@ import {Plugboard} from './plugboard.js';
 import {Model} from './model.js';
 
 const draco = new DRACOLoader();
-draco.setDecoderPath('../node_modules/three/examples/js/libs/draco/gltf/');
+// draco.setDecoderPath('../node_modules/three/examples/js/libs/draco/gltf/');
+draco.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
 const loader = new GLTFLoader().setDRACOLoader(draco);
 
 // const loader = new GLTFLoader();
