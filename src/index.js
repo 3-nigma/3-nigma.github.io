@@ -9,32 +9,27 @@ import {Model} from './model.js';
 
 const draco = new DRACOLoader();
 // draco.setDecoderPath('../node_modules/three/examples/js/libs/draco/gltf/');
+draco.setDecoderConfig({ type: 'js' });
+// draco.setDecoderPath('https://unpkg.com/three@0.114.0/examples/js/libs/draco/');
 draco.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
-const loader = new GLTFLoader().setDRACOLoader(draco);
 
-// const loader = new GLTFLoader();
+const loader = new GLTFLoader().setDRACOLoader(draco);
 
 var machine;
 var myModel;
 var myMachine;
-loader.load('./models/compressed.gltf', function(gltf) {
+loader.load('./models/enigmaModel.gltf', function(gltf) {
     machine = gltf.scene;
     makeMachine();
     myModel = new Model(machine);
     // console.log(myModel.materials[0].color);
-    myModel.materials[0].color = {r: 0.2, g: 0.4, b: 0.4};
-    console.log(myModel.materials);
-    // console.log(myModel.materials[0].fog);
+    myModel.materials[0].color = {r: 0.1, g: 0.45, b: 0.45};
     myModel.materials[0].fog = false;
     myModel.materials[0].metalness = 0;
 
-    myModel.materials[1] = myModel.materials[13];
-    myModel.materials[3] = myModel.materials[13];
-    myModel.materials[4] = myModel.materials[13];
-    
-    // myModel.rotate(0);
-    // myModel.rotate(1);
-    // myModel.rotate(2);
+    // myModel.materials[1] = myModel.materials[13];
+    // myModel.materials[3] = myModel.materials[13];
+    // myModel.materials[4] = myModel.materials[13];
     
 });
 
@@ -106,4 +101,9 @@ metallicButton.addEventListener("change", () => {
     } else {
         myModel.setMetalness(0.2);
     }
+})
+
+let axesCheckBox = document.getElementById("checkbox4");
+axesCheckBox.addEventListener("change", () => {
+    myModel.toggleAxes();
 });
