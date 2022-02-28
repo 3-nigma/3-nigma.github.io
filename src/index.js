@@ -103,7 +103,7 @@ metallicButton.addEventListener("change", () => {
     }
 })
 
-let axesCheckBox = document.getElementById("checkbox4");
-axesCheckBox.addEventListener("change", () => {
-    myModel.toggleAxes();
-});
+// let axesCheckBox = document.getElementById("checkbox4");
+// axesCheckBox.addEventListener("change", () => {
+//     myModel.toggleAxes();
+// });
