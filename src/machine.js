@@ -67,6 +67,7 @@ class Machine {
             }
         }
 
+        model.rotateBasePlate();
         for (var i = 1; i < this.numRotors; i++) {
             if (willRotate[i]) {
                 this.myRotors[i].advance();

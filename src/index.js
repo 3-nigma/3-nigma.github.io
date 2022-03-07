@@ -22,8 +22,17 @@ loader.load('./models/enigmaModel.gltf', function(gltf) {
     machine = gltf.scene;
     makeMachine();
     myModel = new Model(machine);
-    // console.log(myModel.materials[0].color);
-    myModel.materials[0].color = {r: 0.1, g: 0.45, b: 0.45};
+    myModel.materials[0].color = {r: 0.2, g: 0.5, b: 0.55};
+    myModel.materials[1].color = {r: 0.0, g: 0.64, b: 0.64};
+    myModel.materials[2].color = {r: 0.0, g: 0.3, b: 0.3};
+    myModel.materials[3].color = {r: 0.0, g: 0.15, b: 0.15};
+    myModel.materials[4].color = {r: 0.0, g: 0.36, b: 0.4};
+    myModel.materials[7].color = {r: 0.1, g: 0.10, b: 0.15};
+    myModel.materials[8].color = {r: 0.2, g: 0.6, b: 0.6};
+    myModel.materials[11].color = {r: 0.1, g: 0.10, b: 0.13};
+
+    // myModel.materials[0].color.setHex(0xFF6663);
+
     myModel.materials[0].fog = false;
     myModel.materials[0].metalness = 0;
 
@@ -103,7 +112,17 @@ metallicButton.addEventListener("change", () => {
     }
 })
 
-// let axesCheckBox = document.getElementById("checkbox4");
-// axesCheckBox.addEventListener("change", () => {
-//     myModel.toggleAxes();
-// });
+let axesCheckBox = document.getElementById("checkbox4");
+axesCheckBox.addEventListener("change", () => {
+    myModel.toggleAxes();
+});
+
+let rainbowCheckBox = document.getElementById("checkbox3");
+rainbowCheckBox.addEventListener("change", () => {
+    myModel.toggleRainbow();
+});
+
+let wireframeCheckBox = document.getElementById("checkbox5");
+wireframeCheckBox.addEventListener("change", () => {
+    myModel.toggleWireframe();
+});
