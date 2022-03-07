@@ -102,6 +102,11 @@ opaqueButton.addEventListener("change", () => {
     }
 });
 
+/* <div class="checkbox">
+<input type="checkbox" id="checkbox1">
+<label for="checkbox1">Metallic</label>
+</div> */
+
 let metallicButton = document.getElementById("checkbox1");
 metallicButton.addEventListener("change", () => {
 
