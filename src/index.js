@@ -107,15 +107,15 @@ opaqueButton.addEventListener("change", () => {
 <label for="checkbox1">Metallic</label>
 </div> */
 
-let metallicButton = document.getElementById("checkbox1");
-metallicButton.addEventListener("change", () => {
+// let metallicButton = document.getElementById("checkbox1");
+// metallicButton.addEventListener("change", () => {
 
-    if (myModel.metal() == 0.2) {
-        myModel.setMetalness(0.8);
-    } else {
-        myModel.setMetalness(0.2);
-    }
-})
+//     if (myModel.metal() == 0.2) {
+//         myModel.setMetalness(0.8);
+//     } else {
+//         myModel.setMetalness(0.2);
+//     }
+// })
 
 let axesCheckBox = document.getElementById("checkbox4");
 axesCheckBox.addEventListener("change", () => {
